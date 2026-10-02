@@ -1,0 +1,8 @@
+@for(product of products; track $index){
+    @if(product.discount == 0){
+        <h2>{{product.id}}. {{product.name}}: {{product.price}}$</h2>
+    }
+    @else{
+        <h2>{{product.id}}. {{product.name}}: Price without discount:{{product.price}}$; Price with discount: {{product.price - product.price * (product.discount / 100)}}$</h2>
+    }
+}
